@@ -1,0 +1,237 @@
+<!--
+  FICHIER: index.html
+  DESCRIPTION: Page d'atterrissage statique pour "Nexus Studio" (prête à l'emploi).
+  REMARQUES: Remplace les placeholders ci-dessous :
+    - DISCORD_INVITE -> ton lien d'invitation Discord (ex: https://discord.gg/n67kkCBsrq)
+    - MAIL_CONTACT    -> ton email de contact si tu veux utiliser mailto
+    - OG_IMAGE        -> /og-image.png ou URL absolue pour l'aperçu OpenGraph
+    - favicon.ico     -> remplace par ton favicon
+
+  Déploiement recommandé: GitHub Pages / Netlify / Vercel
+-->
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexus Studio — Expériences Roblox</title>
+  <meta name="description" content="Nexus Studio — Créons des expériences Roblox uniques. Rejoins notre Discord et découvre nos projets." />
+  <meta property="og:title" content="Nexus Studio — Expériences Roblox" />
+  <meta property="og:description" content="Nexus Studio — Créons des expériences Roblox uniques." />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent1:#6ee7b7;
+      --accent2:#60a5fa;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Segoe UI,system-ui,Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071024);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Nav */
+    header{backdrop-filter: blur(6px);position:sticky;top:12px;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#042233}
+    nav ul{display:flex;gap:14px;align-items:center;list-style:none;margin:0;padding:0}
+    .btn{padding:10px 14px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#041427;border:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+    .hero h1{margin:0;font-size:38px;line-height:1.02}
+    .hero p{color:var(--muted);margin-top:12px;font-size:16px}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
+
+    /* Projects */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));}
+    .project h4{margin:8px 0 6px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Team */
+    .team{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .member{display:flex;gap:12px;align-items:center;padding:10px;border-radius:12px;background:var(--card)}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent2),var(--accent1));display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    footer{margin-top:40px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(1,1fr)}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">NS</div>
+          <div>
+            <div style="font-weight:700">Nexus Studio</div>
+            <div style="font-size:12px;color:var(--muted)">Expériences Roblox</div>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#team">Équipe</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://discord.gg/n67kkCBsrq" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </nav>
+
+        <div style="display:flex;gap:10px;align-items:center">
+          <a class="btn" href="#projets">Voir projets</a>
+          <a class="btn primary" href="https://discord.gg/n67kkCBsrq" target="_blank" rel="noopener">Rejoindre Discord</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Nexus Studio — on crée des jeux Roblox qui racontent une histoire</h1>
+          <p>Studio indépendant dirigé par <strong>Kwix0695</strong>. Nous développons des expériences immersives : RPG, survie compétitive et univers narratifs.</p>
+          <div class="cta">
+            <a class="btn primary" href="https://discord.gg/n67kkCBsrq" target="_blank" rel="noopener">Rejoindre le Discord</a>
+            <a class="btn" href="#projets">Voir nos projets</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px">
+            <div class="card">
+              <strong>📆 Statut</strong>
+              <div class="muted">2 jeux en développement • 1 alpha interne</div>
+            </div>
+            <div class="card">
+              <strong>📣 Dernière annonce</strong>
+              <div class="muted">Patch alpha 0.3 déployé, balance mise à jour</div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Nous contacter</h3>
+            <p class="muted">Pour support ou partenariats :</p>
+            <p style="margin:8px 0"><a href="mailto:MAIL_CONTACT">nexusstudio203@gmail.com</a></p>
+            <p class="muted">Ou rejoins notre Discord pour support en temps réel.</p>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn" href="https://discord.gg/n67kkCBsrq" target="_blank" rel="noopener">Discord</a>
+              <button class="btn" onclick="copyInvite()">Copier invite</button>
+            </div>
+          </div>
+
+          <div style="height:12px"></div>
+
+          <div class="card">
+            <h4>Stats rapides</h4>
+            <div class="muted">Membres Discord : —</div>
+            <div class="muted">Contributeurs : —</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projets">
+        <h2 style="margin-top:8px">🚀 Projets en cours</h2>
+        <div class="grid">
+          <article class="project card">
+            <img src="/project-a.png" alt="Project A" style="width:100%;border-radius:8px;height:120px;object-fit:cover">
+            <h4>🌌 Project A — Univers Futuriste</h4>
+            <div class="muted">Exploration, quêtes narratives, système de réputation.</div>
+          </article>
+
+          <article class="project card">
+            <img src="/project-b.png" alt="Project B" style="width:100%;border-radius:8px;height:120px;object-fit:cover">
+            <h4>🏰 Project B — RPG Médiéval</h4>
+            <div class="muted">Builds, classes, donjons et événements saisonniers.</div>
+          </article>
+
+          <article class="project card">
+            <img src="/project-c.png" alt="Project C" style="width:100%;border-radius:8px;height:120px;object-fit:cover">
+            <h4>⚔️ Project C — Survie Compétitif</h4>
+            <div class="muted">PVP, zones dynamiques et progression asymétrique.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="team">
+        <h2 style="margin-top:26px">👥 L'équipe</h2>
+        <div class="team">
+          <div class="member card">
+            <div class="avatar">K</div>
+            <div>
+              <div style="font-weight:700">Kwix0695</div>
+              <div class="muted">Fondateur • Lead Dev</div>
+            </div>
+          </div>
+
+          <div class="member card">
+            <div class="avatar">M</div>
+            <div>
+              <div style="font-weight:700">Membre A</div>
+              <div class="muted">Développeur Roblox</div>
+            </div>
+          </div>
+
+          <div class="member card">
+            <div class="avatar">G</div>
+            <div>
+              <div style="font-weight:700">Graphiste</div>
+              <div class="muted">Art & UI</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 style="margin-top:26px">✉️ Contact</h2>
+        <p class="muted">Pour partenariats, presse ou support : <a href="mailto:MAIL_CONTACT">nexusstudio203@gmail.com</a></p>
+        <p class="muted">Ou utilise le Discord : <a href="https://discord.gg/n67kkCBsrq" target="_blank">Rejoindre le Discord</a></p>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Nexus Studio — Créé par Kwix0695 • <span class="muted">Site statique</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Met à jour l'année
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copie l'invitation Discord (remplace DISCORD_INVITE par ton invite réelle)
+    function copyInvite(){
+      const invite = 'https://discord.gg/n67kkCBsrq';
+      navigator.clipboard?.writeText(invite).then(()=>{
+        alert('Invite Discord copiée dans le presse-papier !');
+      }).catch(()=>{
+        prompt('Copie manuellement l'invite:', invite);
+      });
+    }
+
+    // Smooth scroll pour les ancres
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
